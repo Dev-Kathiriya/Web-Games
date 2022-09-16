@@ -1,4 +1,4 @@
-/* {
+ {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -9,33 +9,104 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
-.main{
-    height: 100vh;
-    width: 100%;
 }
+.main{
+
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    background-color: rgba(255, 100, 0, 0.5);
+    position: relative;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+
 .board{
     padding: 15px;
-    width: 15%;
+    width: 250px;
     height: 38vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*background-color: green;*/
+    background-color: rgba(255, 255, 255, 0.25);
 }
+
 .winCount{
     font-size: 50px;
-    width: 15%;
+    width: 250px;
     height: auto;
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-family: sans-serif;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.7);
+
 }
+
+.winCount::before{
+
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.winCount span:nth-child(1){
+
+    /*background-color: red;*/
+    margin-right: 2px;
+}
+
+.winCount span:nth-child(2){
+
+    /*background-color: red;*/
+    margin-left: 10px;
+}
+
 .tiles{
     font-size: 50px;
     text-align: center;
     float: left;
     background-color: yellow;
-    border: 5px solid aquamarine;
-    width: 25%;
-    height: 10vh;
+    /*border: 5px solid aquamarine;*/
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+    border-radius: 10px;
 }
+
+
 .restart{
+
+    width: 150px;
+    height: 50px;
     border-radius: 10px;
     background-color: yellow;
     font-size: medium;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%);
 }
